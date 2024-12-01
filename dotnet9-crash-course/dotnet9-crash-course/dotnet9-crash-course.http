@@ -1,0 +1,6 @@
+@dotnet9_crash_course_HostAddress = http://localhost:5261
+
+GET {{dotnet9_crash_course_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

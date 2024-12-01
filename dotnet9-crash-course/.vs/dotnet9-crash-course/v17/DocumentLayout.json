@@ -1,0 +1,275 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\domain\\contract\\productscontracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\src\\domain\\contract\\productscontracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\domain\\contract\\errorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\src\\domain\\contract\\errorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\domain\\validators\\createproductrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\src\\domain\\validators\\createproductrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\infrastructure\\exceptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\src\\infrastructure\\exceptions\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\src\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\service\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\src\\service\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\domain\\validators\\updateproductrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\src\\domain\\validators\\updateproductrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\src\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\infrastructure\\context\\productdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\src\\infrastructure\\context\\productdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\infrastructure\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\src\\infrastructure\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|d:\\youtube_blog_codes\\clifftechyoutube\\dotnet9-crash-course\\dotnet9-crash-course\\dotnet9-crash-course.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5DE802E3-7D15-481C-B4A5-22A65793D9CA}|dotnet9-crash-course\\dotnet9-crash-course.csproj|solutionrelative:dotnet9-crash-course\\dotnet9-crash-course.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "dotnet9-crash-course\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAADwv2UAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:57:35.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\appsettings.Development.json",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\appsettings.Development.json",
+              "RelativeToolTip": "dotnet9-crash-course\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-30T21:56:21.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateProductRequestValidator.cs",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Domain\\Validators\\CreateProductRequestValidator.cs",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\src\\Domain\\Validators\\CreateProductRequestValidator.cs",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Domain\\Validators\\CreateProductRequestValidator.cs",
+              "RelativeToolTip": "dotnet9-crash-course\\src\\Domain\\Validators\\CreateProductRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:42:36.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Service\\ProductService.cs",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\src\\Service\\ProductService.cs",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Service\\ProductService.cs",
+              "RelativeToolTip": "dotnet9-crash-course\\src\\Service\\ProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:23:09.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Service\\IProductService.cs",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\src\\Service\\IProductService.cs",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Service\\IProductService.cs",
+              "RelativeToolTip": "dotnet9-crash-course\\src\\Service\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:19:00.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\Program.cs",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\Program.cs",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\Program.cs",
+              "RelativeToolTip": "dotnet9-crash-course\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T20:56:16.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductsContracts.cs",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Domain\\Contract\\ProductsContracts.cs",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\src\\Domain\\Contract\\ProductsContracts.cs",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Domain\\Contract\\ProductsContracts.cs",
+              "RelativeToolTip": "dotnet9-crash-course\\src\\Domain\\Contract\\ProductsContracts.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAowBYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:07:34.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ErrorResponse.cs",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Domain\\Contract\\ErrorResponse.cs",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\src\\Domain\\Contract\\ErrorResponse.cs",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Domain\\Contract\\ErrorResponse.cs",
+              "RelativeToolTip": "dotnet9-crash-course\\src\\Domain\\Contract\\ErrorResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:06:19.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Infrastructure\\Exceptions\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\src\\Infrastructure\\Exceptions\\GlobalExceptionHandler.cs",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Infrastructure\\Exceptions\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "dotnet9-crash-course\\src\\Infrastructure\\Exceptions\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:45:28.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UpdateProductRequestValidator.cs",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Domain\\Validators\\UpdateProductRequestValidator.cs",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\src\\Domain\\Validators\\UpdateProductRequestValidator.cs",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Domain\\Validators\\UpdateProductRequestValidator.cs",
+              "RelativeToolTip": "dotnet9-crash-course\\src\\Domain\\Validators\\UpdateProductRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:44:12.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\appsettings.json",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\appsettings.json",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\appsettings.json",
+              "RelativeToolTip": "dotnet9-crash-course\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-30T21:02:53.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProductDbContext.cs",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Infrastructure\\Context\\ProductDbContext.cs",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\src\\Infrastructure\\Context\\ProductDbContext.cs",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Infrastructure\\Context\\ProductDbContext.cs",
+              "RelativeToolTip": "dotnet9-crash-course\\src\\Infrastructure\\Context\\ProductDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:16:34.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Infrastructure\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\src\\Infrastructure\\Mapping\\MappingProfile.cs",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Infrastructure\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "dotnet9-crash-course\\src\\Infrastructure\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:11:54.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Domain\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\src\\Domain\\Entities\\Product.cs",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\src\\Domain\\Entities\\Product.cs",
+              "RelativeToolTip": "dotnet9-crash-course\\src\\Domain\\Entities\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:04:17.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "dotnet9-crash-course",
+              "DocumentMoniker": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\dotnet9-crash-course.csproj",
+              "RelativeDocumentMoniker": "dotnet9-crash-course\\dotnet9-crash-course.csproj",
+              "ToolTip": "D:\\YouTube_blog_Codes\\CliffTechYouTube\\dotnet9-crash-course\\dotnet9-crash-course\\dotnet9-crash-course.csproj",
+              "RelativeToolTip": "dotnet9-crash-course\\dotnet9-crash-course.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-30T21:00:40.013Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

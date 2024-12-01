@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "T3QjftYgigcrnMFZ+RsalDTjL1TSxalSA686QfKgv2I=",
+  "Source": "dotnet9-crash-course",
+  "BasePath": "_content/dotnet9-crash-course",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

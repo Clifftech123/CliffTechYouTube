@@ -1,0 +1,112 @@
+﻿@page "/"
+@using System.Text.Json
+@using dotnetBlazorFullStuck.Web.Components.Interface
+@inject dotnetBlazorFullStuck.Web.Components.Client.CountryClient CountryClient
+
+@rendermode InteractiveServer
+
+
+
+@code {
+    private string searchQuery = string.Empty;
+    private List<Country> countries;
+    private int offset = 1;
+    private int limit = 10;
+    private bool CanGoPrevious => offset > 1;
+    private bool CanGoNext => countries != null && countries.Count == limit;
+    private string errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadCountries();
+    }
+
+    private async Task LoadCountries()
+    {
+        try
+        {
+            var result = await CountryClient.GetCountryDataAsync(offset, limit, searchQuery);
+            countries = JsonSerializer.Deserialize<List<Country>>(result);
+            errorMessage = null; // Clear any previous error messages
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "An error occurred while loading countries. Please try again.";
+            countries = new List<Country>(); // Ensure countries is not null
+        }
+    }
+
+    private async Task Search()
+    {
+        offset = 1;
+        await LoadCountries();
+    }
+
+    private async Task PreviousPage()
+    {
+        if (CanGoPrevious)
+        {
+            offset--;
+            await LoadCountries();
+        }
+    }
+
+    private async Task NextPage()
+    {
+        if (CanGoNext)
+        {
+            offset++;
+            await LoadCountries();
+        }
+    }
+}
+
+
+
+<div>
+    <input type="text" @bind="searchQuery" class="form-control mb-2" placeholder="Search by name" />
+    <button @onclick="Search" class="btn btn-primary">Search</button>
+</div>
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Flag</th>
+            <th scope="col">Phone Code</th>
+            <th scope="col">Country Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (countries != null && countries.Count > 0)
+        {
+            foreach (var country in countries)
+            {
+                <tr>
+                    <td>@country.CountryName</td>
+                    <td>@country.CountryFlag</td>
+                    <td>@country.PhoneCode</td>
+                    <td>@country.CountryShortCode</td>
+
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4" class="text-center">No countries found.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <button type="button" class="btn btn-primary" @onclick="PreviousPage" disabled="@(!CanGoPrevious)">Previous</button>
+    <button type="button" class="btn btn-secondary" @onclick="NextPage" disabled="@(!CanGoNext)">Next</button>
+</div>
+

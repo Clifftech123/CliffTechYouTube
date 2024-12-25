@@ -1,0 +1,83 @@
+﻿@page "/regions-by-country-code"
+
+@using System.Text.Json
+@using dotnetBlazorFullStuck.Web.Components.Interface
+@inject dotnetBlazorFullStuck.Web.Components.Client.CountryClient CountryClient
+
+@rendermode InteractiveServer
+
+
+
+<h3>RegionsByCountryCode</h3>
+
+
+@code {
+    private string countryCode;
+    private List<Regions> regions;
+    private string errorMessage;
+    private bool isLoading;
+
+    private async Task GetRegionsByCountryCode()
+    {
+        isLoading = true;
+        regions = null;
+        errorMessage = null;
+
+        try
+        {
+            var result = await CountryClient.GetRegionsByCountryCodeAsync(countryCode);
+            Console.WriteLine($"Raw JSON response: {result}");
+            regions = JsonSerializer.Deserialize<List<Regions>>(result);
+            Console.WriteLine($"Regions count: {regions.Count}");
+        }
+        catch (JsonException jsonEx)
+        {
+            Console.WriteLine($"JSON Error: {jsonEx.Message}");
+            errorMessage = $"An error occurred while fetching the regions data: {jsonEx.Message}";
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            errorMessage = $"An error occurred while fetching the regions data: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}
+
+<div>
+    <input type="text" @bind="countryCode" placeholder="Enter country code" class="form-control mb-2" />
+    <button @onclick="GetRegionsByCountryCode" class="btn btn-primary" disabled="@(isLoading)">Get Regions</button>
+</div>
+
+@if (isLoading)
+{
+    <div>Loading...</div>
+}
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+@if (regions != null && regions.Any())
+{
+
+    Console.WriteLine($"Regions count: {regions.Count} , {regions}" );
+    <div class="row">
+        @foreach (var region in regions)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title  text-dark tex-s font-weight-bold">@region.name</h5>
+                        @if (!string.IsNullOrEmpty(region.shortCode))
+                        {
+                            <p class="card-text ">Code:<span class="text-primary"> @region.shortCode </span>  </p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

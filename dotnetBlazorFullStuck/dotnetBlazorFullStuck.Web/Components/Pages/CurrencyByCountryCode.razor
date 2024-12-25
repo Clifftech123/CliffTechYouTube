@@ -1,0 +1,74 @@
+﻿@page "/currency-by-country-code"
+@using System.Text.Json
+@using dotnetBlazorFullStuck.Web.Components.Interface
+@inject dotnetBlazorFullStuck.Web.Components.Client.CountryClient CountryClient
+
+@rendermode InteractiveServer
+
+@code {
+    private string countryCode = string.Empty;
+    private IEnumerable<Currency> currencies = Enumerable.Empty<Currency>();
+    private string errorMessage = string.Empty;
+    private bool isLoading;
+
+    private async Task GetRegionsByCountryCode()
+    {
+        isLoading = true;
+        currencies = Enumerable.Empty<Currency>();
+        errorMessage = string.Empty;
+
+        try
+        {
+            var result = await CountryClient.GetCurrencyAsync(countryCode);
+            Console.WriteLine($"Raw JSON response: {result}");
+            currencies = JsonSerializer.Deserialize<IEnumerable<Currency>>(result);
+        }
+        catch (JsonException jsonEx)
+        {
+            Console.WriteLine($"JSON Error: {jsonEx.Message}");
+            errorMessage = $"An error occurred while fetching the regions data: {jsonEx.Message}";
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            errorMessage = $"An error occurred while fetching the regions data: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}
+
+<div>
+    <input type="text" @bind="countryCode" placeholder="Enter country code" class="form-control mb-2" />
+    <button @onclick="GetRegionsByCountryCode" class="btn btn-primary" disabled="@(isLoading)">Get Regions</button>
+</div>
+
+@if (isLoading)
+{
+    <div>Loading...</div>
+}
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+@if (currencies != null && currencies.Any())
+{
+    <div class="row">
+        @foreach (var currency in currencies)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark font-weight-bold">@currency.name</h5>
+                        @if (!string.IsNullOrEmpty(currency.code))
+                        {
+                            <p class="card-text">Code:<span class="text-primary"> @currency.code </span></p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

@@ -1,0 +1,21 @@
+@StructuredLoggingDotnet9_HostAddress = http://localhost:5005
+
+### Get Weather Forecasts
+GET {{StructuredLoggingDotnet9_HostAddress}}/weatherforecast/
+Accept: application/json
+
+
+### Get Weather Forecast by Date
+GET {{StructuredLoggingDotnet9_HostAddress}}/weatherforecast/date/2023-10-10
+Accept: application/json
+
+### Add New Weather Forecast
+POST {{StructuredLoggingDotnet9_HostAddress}}/weatherforecast/add
+Accept: application/json
+Content-Type: application/json
+
+{
+  "date": "2023-10-10",
+  "temperatureC": 25,
+  "summary": "Warm"
+}

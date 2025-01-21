@@ -1,0 +1,6 @@
+@MogoDbProductAPI_HostAddress = http://localhost:5244
+
+GET {{MogoDbProductAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

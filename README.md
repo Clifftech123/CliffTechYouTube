@@ -6,8 +6,8 @@ Hello, and welcome to the CliffTech YouTube code repository! This is the one-sto
 Feel free to clone this repository and use the code for your own projects. I will continuously update this repository with new and exciting code as I create more tutorials on YouTube. Stay tuned for regular updates!
 
 
-If you find me Videos you can by me a coffee 
-[/Assets/red-button.png](https://buymeacoffee.com/clifftech)
+If you find me Videos you can by me a coffee <br/>
+ <img src="https://raw.githubusercontent.com/Clifftech123/CliffTechYouTube/main/Assets/red-button.png" alt="Buy me a coffee" style="max-width: 250px; height: auto;">
 
 ## 📺 Find CliffTech on YouTube
 Don't miss out on any tutorials! Subscribe to the CliffTech YouTube channel: [CliffTech YouTube](https://www.youtube.com/@CliffTech)

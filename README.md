@@ -5,9 +5,28 @@ Hello, and welcome to the CliffTech YouTube code repository! This is the one-sto
 
 Feel free to clone this repository and use the code for your own projects. I will continuously update this repository with new and exciting code as I create more tutorials on YouTube. Stay tuned for regular updates!
 
+ 
+## Support the Channel
 
-If you find me Videos you can by me a coffee <br/>
- <img src="https://raw.githubusercontent.com/Clifftech123/CliffTechYouTube/main/Assets/red-button.png" alt="Buy me a coffee" style="max-width: 250px; height: auto;">
+If you've found value in our content, please consider supporting us with a small contribution. Your support helps us continue creating high-quality tutorials and resources for the community.
+
+[Support Us on Buy Me A Coffee](https://buymeacoffee.com/clifftech)
+
+---
+
+**Why Support?**
+
+• Helps maintain and improve the quality of content <br/>
+• Supports ongoing tutorial creation and updates <br/>
+• Contributes to the growth of open-source projects <br/>
+• Shows appreciation for the time and effort invested
+
+---
+
+**Your Support Matters**
+
+Every contribution, no matter how small, counts towards keeping our content free and accessible to all. Thank you for your generosity!
+
 
 ## 📺 Find CliffTech on YouTube
 Don't miss out on any tutorials! Subscribe to the CliffTech YouTube channel: [CliffTech YouTube](https://www.youtube.com/@CliffTech)

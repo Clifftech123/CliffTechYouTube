@@ -7,9 +7,7 @@ Feel free to clone this repository and use the code for your own projects. I wil
 
 
 If you find me Videos you can by me a coffee 
-<a href="https://buymeacoffee.com/clifftech" target="_blank">
-    <img src="/Assets/red-button.png" alt="Buy Me A Coffee">
-</a>
+[(/Assets/red-button.png)](https://buymeacoffee.com/clifftech)
 
 ## 📺 Find CliffTech on YouTube
 Don't miss out on any tutorials! Subscribe to the CliffTech YouTube channel: [CliffTech YouTube](https://www.youtube.com/@CliffTech)

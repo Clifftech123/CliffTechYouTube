@@ -1,0 +1,35 @@
+﻿@using MudBlazor
+@inject IDialogService DialogService
+@inject ISnackbar Snackbar
+
+<MudDialog>
+    <TitleContent>
+        <MudText Typo="Typo.h6">
+            <MudIcon Icon="@Icons.Material.Filled.DeleteForever" Class="mr-3" />
+            Confirm Deletion
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudAlert Severity="Severity.Warning" Class="my-2">
+            <MudText>Are you sure you want to delete this employee?</MudText>
+            <MudText Typo="Typo.subtitle2">This action cannot be undone.</MudText>
+        </MudAlert>
+    </DialogContent>
+    <DialogActions>
+        <MudButton Variant="Variant.Outlined" Color="Color.Default" OnClick="Cancel"
+            StartIcon="@Icons.Material.Filled.Cancel">Cancel</MudButton>
+        <MudButton Variant="Variant.Filled" Color="Color.Error" OnClick="Submit"
+            StartIcon="@Icons.Material.Filled.Delete">Delete</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] IMudDialogInstance MudDialog { get; set; }
+    [Parameter] public Guid EmployeeId { get; set; }
+    [Parameter] public string Message { get; set; }
+
+
+    private void Cancel() => MudDialog.Cancel();
+
+    private void Submit() => MudDialog.Close(DialogResult.Ok(true));
+}

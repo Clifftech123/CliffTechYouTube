@@ -1,0 +1,72 @@
+﻿@using BlazorCrudApp.Domain
+@using BlazorCrudApp.Service
+@using MudBlazor
+@inject IEmployeeService EmployeeService
+@inject ISnackbar Snackbar
+
+
+
+
+<MudDialog>
+    <TitleContent>
+        <MudText Typo="Typo.h6">Edit Employee</MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudForm @ref="form" Model="@model">
+            <MudTextField T="string" @bind-Value="model.EmployeName" Label="Employee Name" Required="true"
+                RequiredError="Name is required!" />
+
+            <MudSelect T="string" Label="Gender" @bind-Value="model.Gender" Required="true"
+                RequiredError="Gender is required!">
+                <MudSelectItem Value="@("Male")">Male</MudSelectItem>
+                <MudSelectItem Value="@("Female")">Female</MudSelectItem>
+            </MudSelect>
+
+            <MudTextField T="string" @bind-Value="model.City" Label="City" Required="true"
+                RequiredError="City is required!" />
+        </MudForm>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" OnClick="Submit">Update</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] IMudDialogInstance Dialog { get; set; }
+
+    [Parameter] public EmployeeDetailsDto Employee { get; set; }
+    [Parameter] public string Title { get; set; }
+
+
+    private MudForm form;
+    private UpdateEmployeeDto model = new();
+
+    protected override void OnInitialized()
+    {
+        model.Id = Employee.Id;
+        model.EmployeName = Employee.EmployeName;
+        model.Gender = Employee.Gender;
+        model.City = Employee.City;
+    }
+
+    private void Cancel() => Dialog.Cancel();
+
+    private async Task Submit()
+    {
+        await form.Validate();
+        if (form.IsValid)
+        {
+            try
+            {
+                await EmployeeService.UpdateEmployeeAsync(model);
+                Snackbar.Add("Employee updated successfully", Severity.Success);
+                Dialog.Close(DialogResult.Ok(true));
+            }
+            catch (Exception)
+            {
+                Snackbar.Add("Error updating employee", Severity.Error);
+            }
+        }
+    }
+}

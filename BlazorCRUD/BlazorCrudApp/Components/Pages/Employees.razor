@@ -1,0 +1,180 @@
+﻿@page "/"
+@using BlazorCrudApp.Domain
+@using BlazorCrudApp.Service
+@inject IEmployeeService EmployeeService
+@inject IDialogService DialogService
+@inject ISnackbar Snackbar
+
+<MudContainer MaxWidth="MaxWidth.ExtraLarge">
+    <MudPaper Elevation="3" Class="pa-6 ma-4">
+        <MudGrid>
+            <MudItem xs="12" Class="d-flex justify-space-between align-center">
+                <MudText Typo="Typo.h3" Color="Color.Primary" Class="mb-4">Employee Directory</MudText>
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" StartIcon="@Icons.Material.Filled.PersonAdd"
+                    Size="Size.Large" Class="ml-auto" OnClick="OpenCreateDialog">
+                    New Employee
+                </MudButton>
+            </MudItem>
+
+            <MudItem xs="12">
+                @if (_loading)
+                {
+                    <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-4" />
+                }
+
+                <MudDataGrid T="EmployeeDetailsDto" Items="@_employees" Loading="@_loading" Hover="true" Dense="false"
+                    Striped="false" Bordered="false" ReadOnly="true" Class="elevation-1">
+                    <ToolBarContent>
+                        <MudText Typo="Typo.h6" Class="mud-primary-text">Team Members (@_employees.Count)</MudText>
+                    </ToolBarContent>
+                    <Columns>
+                        <PropertyColumn Property="x => x.EmployeName" Title="Employee Name">
+                            <CellTemplate>
+                                <MudStack Row="true" AlignItems="AlignItems.Center">
+                                    <MudAvatar Color="Color.Secondary" Size="Size.Medium">@(context.Item.EmployeName[0])
+                                    </MudAvatar>
+                                    <MudText>@context.Item.EmployeName</MudText>
+                                </MudStack>
+                            </CellTemplate>
+                        </PropertyColumn>
+                        <PropertyColumn Property="x => x.Gender" Title="Gender">
+                            <CellTemplate>
+                                <MudChip Color="@(context.Item.Gender == "Male" ? Color.Info : Color.Secondary)"
+                                    Size="Size.Small">@context.Item.Gender</MudChip>
+                            </CellTemplate>
+                        </PropertyColumn>
+                        <PropertyColumn Property="x => x.City" Title="Location">
+                            <CellTemplate>
+                                <MudStack Row="true" AlignItems="AlignItems.Center">
+                                    <MudIcon Icon="@Icons.Material.Filled.LocationOn" Size="Size.Small" />
+                                    <MudText>@context.Item.City</MudText>
+                                </MudStack>
+                            </CellTemplate>
+                        </PropertyColumn>
+                        <PropertyColumn Property="x => x.CreatedAt" Title="Joined" Format="MMM dd, yyyy" />
+                        <TemplateColumn Title="Actions" TextAlignment="TextAlignment.Right">
+                            <CellTemplate>
+                                <MudStack Row="true" Spacing="0" Class="pa-2">
+                                    <div>
+                                        <MudIconButton Icon="@Icons.Material.Filled.Edit" Color="Color.Primary"
+                                            Size="Size.Small" Class="mx-1"
+                                            OnClick="@(() => OpenEditDialog(context.Item))" />
+                                    </div>
+                                    <div>
+                                        <MudIconButton Icon="@Icons.Material.Filled.Delete" Color="Color.Error"
+                                            Size="Size.Small" Class="mx-1"
+                                            OnClick="@(() => OpenDeleteDialog(context.Item.Id))" />
+                                    </div>
+                                </MudStack>
+                            </CellTemplate>
+
+                        </TemplateColumn>
+                    </Columns>
+                    <PagerContent>
+                        <MudDataGridPager T="EmployeeDetailsDto" PageSizeOptions="new int[] { 10, 25, 50, 100 }" />
+                    </PagerContent>
+                </MudDataGrid>
+            </MudItem>
+        </MudGrid>
+    </MudPaper>
+</MudContainer>
+
+
+@code {
+    private List<EmployeeDetailsDto> _employees = new();
+    private bool _loading = true;
+    private string _searchString = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadEmployees();
+
+    }
+
+    private async Task LoadEmployees()
+    {
+        try
+        {
+            _loading = true;
+            StateHasChanged();
+
+            _employees = (await EmployeeService.GetAllEmployeesAsync()).ToList();
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add("Failed to load employees", Severity.Error);
+            // Consider logging the exception here
+        }
+        finally
+        {
+            _loading = false;
+            StateHasChanged();
+        }
+    }
+
+
+    @*  Delete Dialog *@
+
+    private async Task OpenEditDialog(EmployeeDetailsDto employee)
+    {
+        var parameters = new DialogParameters
+            {
+                ["Employee"] = employee,
+                ["Title"] = $"Edit Employee: {employee.EmployeName}"
+            };
+
+        var dialog = await DialogService.ShowAsync<EditEmployee>("Edit Employee", parameters);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            await LoadEmployees();
+            Snackbar.Add("Employee updated successfully", Severity.Success);
+        }
+    }
+
+
+
+    @* Delete Dialog  *@
+    private async Task OpenDeleteDialog(Guid employeeId)
+    {
+        var parameters = new DialogParameters
+            {
+                ["EmployeeId"] = employeeId,
+                ["Message"] = "Are you sure you want to delete this employee? This action cannot be undone."
+            };
+
+        var dialog = await DialogService.ShowAsync<DeleteConfirmation>("Confirm Deletion", parameters);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            try
+            {
+                await EmployeeService.DeleteEmployeeAsync(employeeId);
+                await LoadEmployees();
+                Snackbar.Add("Employee deleted successfully", Severity.Success);
+            }
+            catch (Exception)
+            {
+                Snackbar.Add("Failed to delete employee", Severity.Error);
+            }
+        }
+    }
+
+
+
+    @*  Create Dialog *@
+
+    private async Task OpenCreateDialog()
+    {
+        var dialog = await DialogService.ShowAsync<CreateEmployee>("Add New Employee");
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            await LoadEmployees();
+            Snackbar.Add("Employee created successfully", Severity.Success);
+        }
+    }
+}

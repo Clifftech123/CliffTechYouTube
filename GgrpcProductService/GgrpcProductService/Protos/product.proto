@@ -1,0 +1,96 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GgrpcProductService";
+
+package  product ;
+
+service  Product {
+  
+  // This is will turn to be Csharp service code
+  // We think of this as interface where we define some method we want to implement in the service 
+  
+  rpc CreateProduct(CreateProductRequest) returns (CreateProductResponse);
+  rpc GetProduct(GetProductRequest) returns  (GetProductResponse);
+  rpc ListProduct(ListProductsRequest) returns (ListProductsResponse);
+  rpc UpdateProduct(UpdateProductRequest) returns (UpdateProductResponse);
+  rpc DeleteProduct(DeleteProductRequest) returns ( DeleteProductResponse);
+  
+}
+
+// Product model used in message 
+
+message  ProductModel  {
+  string  id = 1;
+  string  name = 2 ;
+  string  description = 3 ;
+  double  price  = 4 ; 
+  string  created_at = 5;
+  string  updated_at = 6;
+  string  tag = 7;
+  
+}
+
+// Create Operations
+message CreateProductRequest {
+  string name = 1;
+  string description = 2;
+  double price = 3;
+  string tag = 4;
+}
+
+// Create Product response 
+
+message CreateProductResponse {
+  bool success = 1;
+  string message = 2;
+  ProductModel product = 3;
+}
+
+// Read Operations 
+
+message GetProductRequest {
+  string id = 1;
+}
+
+message GetProductResponse {
+  bool success = 1;
+  string message = 2;
+  ProductModel product = 3;
+}
+
+message ListProductsRequest {
+  int32 page = 1;
+  int32 page_size = 2;
+}
+
+message ListProductsResponse {
+  bool success = 1;
+  string message = 2;
+  repeated ProductModel products = 3;
+  int32 total_count = 4;
+}
+
+// Update operations
+message UpdateProductRequest {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  double price = 4;
+  string tag = 5;
+}
+
+message UpdateProductResponse {
+  bool success = 1;
+  string message = 2;
+  ProductModel product = 3;
+}
+
+// Delete operations
+message DeleteProductRequest {
+  string id = 1;
+}
+
+message DeleteProductResponse {
+  bool success = 1;
+  string message = 2;
+}
